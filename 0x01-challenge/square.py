@@ -1,31 +1,38 @@
 #!/usr/bin/python3
-"""Correct Square module"""
+'''
+Module suare
+contains class square
+'''
 
 
-class square():
-    """Square class."""
+class Square():
+    '''
+    Class square
+    '''
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """Init sequence."""
+        '''Class Init method'''
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def area(self):
+    def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.height
 
-    def perimeter(self):
-        """ Perimeter of the square """
+    def permiter_of_my_square(self):
+        '''Perimeter of the square'''
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """String representation."""
+        '''Class handle print'''
         return "{}/{}".format(self.width, self.height)
 
+
 if __name__ == "__main__":
-    s = square(width=12, height=9)
+    '''Test Class'''
+    s = Square(width=12, height=9)
     print(s)
-    print(s.area())
-    print(s.perimeter())
+    print(s.area_of_my_square())
+    print(s.permiter_of_my_square())
